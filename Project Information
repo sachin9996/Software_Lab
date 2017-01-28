@@ -1,0 +1,84 @@
+
+
+Rough project info for RealOffice
+
+
+Requirements
+
+Structured,good for repoting(querying), simple to use , easy to evolve
+
+Meetings
+-Reasearch scholar evaluations & meetings
+-Porject evaluations
+-Poster presentations
+-Selection examinations
+
+Attributes for each meeting
+-Day,Time
+-Venue
+-List of Participants
+-Resources required(snacks,stationary,student files)
+
+Transaction to be allowed
+-Set up a meeting
+	>reminders
+	>enabling
+	>cleaning,checking
+-Cancel a meeting
+	>undo what has been set up
+	>reminders
+-File reports about the meeting
+-State of some crucial archive
+	>Signatures required
+	>Payments
+
+Reporting
+-Monthly meeting
+-Expenditure
+-Next set of meeting
+
+
+Project interactive usage though is web based
+
+
+Project software usage
+-django
+-mysql or sqlite3
+
+
+Features Supported on web interface
+
+Displays the entire slot timetable(1 week at a time) which shows which slot is booked and which is not.
+Can select a slot and bookit(need to provide req info)
+If two meetings are by close proximity in the same venue creates a warning
+Can cancel a meeting 
+Supports Queries:List of all people who have given seminars/done evaluations.... ;Which venue was most used;Cost of resources 
+
+
+Database Tables
+
+TABLE Meeting 
+Fileds 
+
+Meeting Id
+Meeting Catergorization_info ( seminar/evaluation/examination/presentation)
+Meeting By
+Meeting Venue
+Meeting Time
+SUB TABLE Meeting participants
+SUB TABLE Meeting Resources
+SUB TABLE Meeting spl_activites status(signatures/payment)
+
+TABLE VENUE_STATUS
+
+Venue Id
+Venue Name
+Venue Status(Free/Booked)
+
+TABLE SLOT_SCHEDULAR
+
+Slot id
+Slot name
+Slot time&date
+Slot Status(Booked/Free)
+Slot Booked_info(Meeting Id)
