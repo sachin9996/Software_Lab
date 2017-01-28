@@ -5,37 +5,37 @@ Rough project info for RealOffice
 
 Requirements
 
-Structured,good for repoting(querying), simple to use , easy to evolve
+Structured,good for reporting(querying), simple to use , easy to evolve
 
 Meetings
--Reasearch scholar evaluations & meetings
--Porject evaluations
--Poster presentations
--Selection examinations
+- Research scholar evaluations & meetings
+- Project evaluations
+- Poster presentations
+- Selection examinations
 
 Attributes for each meeting
--Day,Time
--Venue
--List of Participants
--Resources required(snacks,stationary,student files)
+- Day,Time
+- Venue
+- List of Participants
+- Resources required(snacks, stationery, student files)
 
-Transaction to be allowed
--Set up a meeting
-	>reminders
-	>enabling
-	>cleaning,checking
+Transactions to be allowed
+- Set up a meeting
+	> reminders
+	> enabling
+	> cleaning, checking
 -Cancel a meeting
-	>undo what has been set up
-	>reminders
--File reports about the meeting
--State of some crucial archive
-	>Signatures required
-	>Payments
+	> undo what has been set up
+	> reminders
+- File reports about the meeting
+- State of some crucial archive
+	> Signatures required
+	> Payments
 
 Reporting
--Monthly meeting
--Expenditure
--Next set of meeting
+- Monthly meeting
+- Expenditure
+- Next set of meeting
 
 
 Project interactive usage though is web based
