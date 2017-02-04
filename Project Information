@@ -12,18 +12,20 @@ Meetings
 - Project evaluations
 - Poster presentations
 - Selection examinations
+- Seminars by visitors(Abstract)
 
 Attributes for each meeting
 - Day,Time
 - Venue
 - List of Participants
-- Resources required(snacks, stationery, student files)
+- Resources required(snacks, stationery, student files,template marker)
 
 Transactions to be allowed
 - Set up a meeting
 	> reminders
 	> enabling
-	> cleaning, checking
+	> cleaning, projector checking
+	> arranging resources 
 -Cancel a meeting
 	> undo what has been set up
 	> reminders
