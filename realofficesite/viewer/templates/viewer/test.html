@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>REAL OFFICE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{%static "bootstrap.min.css" %}">
+  <link rel="stylesheet" href="{%static "bootstrap-responsive.min.css" %}">
+  <script src="{% static "jquery-1.8.3.min.js" %}" type="text/javascript"></script>
+  <script src="{% static "bootstrap.min.js" %}" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+   
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="https://www.cse.iitm.ac.in">CSE_IITM</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Weekly View</a></li>
+        <li><a href="#">Booking</a></li>
+        <li><a href="#">Status of requests</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1>CURRENT WEEK's MEETING SCHEDULE </h1>
+      <p>Meetings</p>
+      <hr>
+      <p>Examinations</p>
+      <hr>
+      <p>Presentations and Seminars</p>
+      <hr>
+      <form method ='post' id='test'>
+	      <input type="hidden" value="video34"/>
+	      <input type="submit" value='Test button'/>
+	      <div id='message'>Initial text</div>
+      </form>
+      <hr>
+      <button id="BUTN">SAY HELLO</button>
+      
+      <hr>
+
+    <section id="carousel">
+      <div class="row">
+        <div class="columns">
+          <div id="myCarousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="row-fluid">
+  					 <div class="row-fluid">
+  						<div class="demo"></div>
+                        <div class="demo"></div>
+					  	<div class="demo"></div>
+					  	<div class="demo"></div>
+   					 </div>
+					 <div class="row-fluid">
+						<div class="demo"></div>
+					  	<div class="demo"></div>
+					  	<div class="demo"></div>
+					  	<div class="demo"></div>
+					 </div>	
+    			</div>
+              </div>
+              <div class="item">
+                <div class="row-fluid">
+  						<div class="demo"></div>
+   						<div class="demo"></div>
+  						<div class="demo"></div>
+  						<div class="demo"></div>
+  				</div>
+   				<div class="row-fluid">
+  						<div class="demo"></div>
+  						<div class="demo"></div>
+  						<div class="demo"></div>
+  						<div class="demo"></div>
+  				</div>
+              </div>  
+            </div>
+            <a class="left carousel-control " href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+          </div>
+         </div>
+    </section>
+
+    </div>
+    <div class="col-sm-2 sidenav">
+	<h4>LIVE FEED</h4>
+      <div class="well" style="height:35%;">
+        <h3>News Feed</h3>  
+        <p>Alerts</p>
+	<p>NOtifications</p>
+      </div>
+      <div class="well" style="height:45%;">
+        <h3>Pending work</h3>
+	<p>Cleaning</p>
+	<p>Resources</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>QUERY:Availablity of Meeting room at given time</p>
+  <button onclick="Check()">Check</button>
+  <br/>
+  <br/>Enter Room no :
+  <input type="text" id="txt1" name="text1">Enter time :
+  <input type="test" id="txt2" name="text2">
+  <p id="demo"></p>
+  </footer>
+  <script>
+	function Check(){
+		var venue = document.getElementById("txt1").value;
+		var time  = document.getElementById("txt2").value;
+		var result="Function to be implemented";
+		document.getElementById("demo").innerHTML = result;
+	}
+   </script>
+   <script type="text/javascript">
+	$(document).ready(function(){
+		$("test").submit(function(event){
+			event.preventDefault();
+			$.ajax({
+				type:"POST",
+				url:'/test/',
+				data:"Hello",
+				success: function(result){
+				          alert(result)
+					  }
+			 });
+		 return false;
+		 });
+	});
+   </script>
+ <script>
+var button = document.getElementById("BUTN");
+button.addEventListener("click",tt);
+function tt()
+{
+	$.ajax({
+		url:'/test/',
+		type:'POST',
+		contentType:'text',
+		data:"Hello",
+		success:function(result){
+			alert(result)
+			}
+		});
+}
+ </script>
+
+
+
+</body>
+</html>
+
