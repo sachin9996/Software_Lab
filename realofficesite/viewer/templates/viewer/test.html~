@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% load static %}
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel=stylesheet" href="{%static "bootstrap.min.css" %}">
-  <link rel=stylesheet" href="{%static "bootstrap-responsive.min.css" %}">
+  <link rel="stylesheet" href="{%static "bootstrap.min.css" %}">
+  <link rel="stylesheet" href="{%static "bootstrap-responsive.min.css" %}">
   <script src="{% static "jquery-1.8.3.min.js" %}" type="text/javascript"></script>
   <script src="{% static "bootstrap.min.js" %}" type="text/javascript"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -31,8 +31,8 @@
     
     /* Set black background color, white text and some padding */
     footer {
-      background-color: #555;
-      color: white;
+     background-color: #555;
+     // color: white;
       padding: 15px;
     }
     
@@ -151,20 +151,82 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>QUERY:Availablity of Meeting room at given time</p>
+/*<p>QUERY:Availablity of Meeting room at given time</p>
   <button onclick="Check()">Check</button>
   <br/>
   <br/>Enter Room no :
   <input type="text" id="txt1" name="text1">Enter time :
   <input type="test" id="txt2" name="text2">
   <p id="demo"></p>
+*/ <p>Adding a meeting with name venue time capacity and other requirement </p>
+  <button onclick="Check1()">Add</button>
+  <br/>
+  <br/>Enter Event Name:
+  <input type="text" id="txt3" name="text3">Venue:
+  <input type="text" id="txt4" name="text4">StartTime:
+  <input type="text" id="txt5" name="text5">EndTime:
+  <input type="text" id="txt6" name="text6">Capacity:
+  <input type="text" id="txt7" name="text7">Projector(type yes/no):
+  <input type="text" id="txt8" name="text8">
+  <p>Find an venue for a given event </p>
+  <button onclick="Find()">Find</button>
+  <br/>
+  <br/>Enter Event Name:
+  <input type="text" id="txt9" name="text9">
   </footer>
+  <script>
+	function Find(){
+		var name = document.getElementById("txt9").value;
+		$.ajax({
+			url:'/find/',
+			type:'POST',
+			contentType:'text',
+			data:name,
+			success:function(result){
+				alert(result)
+				}
+			});
+	}
+  </script>
+  <script>
+	function Check1(){
+		var e_name = document.getElementById("txt3").value;
+		var e_venue = document.getElementById("txt4").value;
+		var e_stime = document.getElementById("txt5").value;
+		var e_etime = document.getElementById("txt6").value;
+		var e_capacity = document.getElementById("txt7").value;
+		var e_proj = document.getElementById("txt8").value;
+		$.ajax({
+			url:'/add/',
+			type:'POST',
+			contentType:'text',
+			data:e_name+" "+e_venue+" "+e_stime+" "+e_etime+" "+e_capacity+" "+e_proj,
+			success:function(result){
+				alert(result)
+				}
+			});
+		var result="Function to be implemented";
+		document.getElementById("demo").innerHTML = result;
+	}
+   </script>
+				
+
   <script>
 	function Check(){
 		var venue = document.getElementById("txt1").value;
 		var time  = document.getElementById("txt2").value;
+		$.ajax({
+			url:'/test/',
+			type:'POST',
+			contentType:'text',
+			data: venue+" "+time,
+			success:function(result){
+				alert(result)
+				}
+			});
 		var result="Function to be implemented";
-		document.getElementById("demo").innerHTML = result;
+		document.getElementById("demo").innerHTML = result; 
+
 	}
    </script>
    <script type="text/javascript">
@@ -174,7 +236,7 @@
 			$.ajax({
 				type:"POST",
 				url:'/test/',
-				data:"Hello",
+				data:"nothing",
 				success: function(result){
 				          alert(result)
 					  }
