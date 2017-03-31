@@ -24,6 +24,8 @@ import viewer.views
 urlpatterns = [
     url(r'^viewer/', include('viewer.urls')),
     url(r'test/',viewer.views.test,name='test'),
+    url(r'^add/',viewer.views.add,name='add'),
+    url(r'^find/',viewer.views.find,name='find'),
     url(r'^interactive/',include('interactive.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^newapp/',include('newapp.urls')),
